@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SabinaHisamova/js-env-setup-2023-06/issues"
   },
-  "homepage": "https://github.com/SabinaHisamova/js-env-setup-2023-06#readme"
+  "homepage": "https://github.com/SabinaHisamova/js-env-setup-2023-06#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
