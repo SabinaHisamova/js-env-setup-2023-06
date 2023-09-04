@@ -21,8 +21,6 @@ describe("arrayModif function", () => {
     });
   
     it("check modificated arr [2,4,6,9,10,34,23,14,45,16]", () => {
-      const logSpy = jest.spyOn(console, "log");
-      arrayModif();
       expect(arrayModif()).toStrictEqual([4, 16, 36, 81, 100, 1156, 529, 196, 2025, 256]);
     });
   });
