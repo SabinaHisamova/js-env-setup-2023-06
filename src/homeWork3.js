@@ -1,6 +1,6 @@
 export function sum50to100 () {
-    let sum = 0;
-    for (let i = 50; i <= 100; i++){
+    let sum = 50;
+    for (let i = 51; i <= 100; i++){
     	sum = sum + i;
     };
 

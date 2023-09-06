@@ -1,4 +1,4 @@
-export function getDayOfWeek(a,b) {
+export function getDayOfWeek() {
     const input = prompt('Enter date DD.MM.YYYY');
     const [day,month,year] = input.split('.');
     const date = new Date(`${year}-${month}-${day}`);
@@ -8,7 +8,8 @@ export function getDayOfWeek(a,b) {
     console.log(dayOfWeek); 
 };
 
-export function secPassed(date) {
+export function minPassed() {
+    const date = new Date();
 	let hours = date.getHours();
 	let min = date.getMinutes();
 	let sec = date.getSeconds();
@@ -25,9 +26,11 @@ export function getYounger() {
 
     if (Number(petya) < Number(masha)) {
     	young = 'masha';
-    } else {
+    } else if (Number(petya) > Number(masha)) {
     	young = 'petya';
-    }
+    } else {
+    	young = 'they are the same age';
+    };
 
     return young;
 }

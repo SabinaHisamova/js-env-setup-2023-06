@@ -29,6 +29,10 @@ describe("isWord function", () => {
     it("isWord 'left and right'", () => {
         expect(isWord('left and right')).toBe(false);
     });
+
+    it("isWord 'word '", () => {
+      expect(isWord('word ')).toBe(true);
+  });
 });
 
 describe("pow function", () => {

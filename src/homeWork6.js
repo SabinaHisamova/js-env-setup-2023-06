@@ -3,9 +3,9 @@ export function diff(a,b) {
 };
 
 export function isWord(text) {
-    const arr = text.split('');
+    const arr = text.split(' ');
 
-	if (arr.includes(' ')) {
+	if (arr.length >= 2 && arr[1].length != 0) {
 		return false;
 	} else {
 		return true;
