@@ -2,6 +2,9 @@ import {getDayOfWeek} from './homeWork8';
 import {minPassed} from './homeWork8';
 import {getYounger} from './homeWork8';
 
+//afterEach(() => {
+//    jest.clearAllMocks();
+//});
 
 describe('getDayOfWeek function', () => {
     it("getDayOfWeek is a function", () => {
@@ -23,21 +26,24 @@ describe('minPassed function', () => {
    it("minPassed is a function", () => {
        expect(minPassed).toBeInstanceOf(Function);
    });
-   ////Date.prototype.getHours = jest.fn().mockReturnValue(1);
-   ////Date.prototype.getMinutes = jest.fn().mockReturnValue(0);
-   ////Date.prototype.getSeconds = jest.fn().mockReturnValue(0);
 
-    ////jest.spyOn(Date, "new").mockReturnValue(1693991280000);
-    ////expect(Date.now()).toBe(1693991280000);
+////jest.spyOn(Date, "new").mockReturnValue(1693991280000);
+////expect(Date.now()).toBe(1693991280000);
 
-//Error:Expected: 14 Received: undefined
-    //const mockDate = new Date('09-06-2023 14:08:00');
-    //jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
+//    const mockDate = new Date('09-06-2023 14:08:00');
+//    jest.spyOn(global, 'Date').mockImplementationOnce(() => mockDate);
 
-    //it('should return timestamp', () => {
-    //    expect(minPassed()).toEqual(14);
-    //});
-//
+   it("should return passed minutes", () => {
+       const mockDate = new Date('09-06-2023 14:08:00');
+       const spyMock = jest.spyOn(global, 'Date').mockImplementationOnce(() => mockDate);
+
+       const logSpy = jest.spyOn(console, "log");
+       minPassed();
+       expect(logSpy).toHaveBeenCalledWith(848);
+
+       spyMock.mockRestore();
+   });
+
 });
 
 describe('getYounger function', () => {

@@ -24,6 +24,9 @@ export function getYounger() {
     let masha = new Date('1998-05-07');
     let young;
 
+    console.log("petya",petya);
+    console.log("masha",masha);
+
     if (Number(petya) < Number(masha)) {
     	young = 'masha';
     } else if (Number(petya) > Number(masha)) {
